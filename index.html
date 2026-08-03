@@ -231,7 +231,7 @@ async function pGrass(u8,opacity){ const img=await u8ToImage(u8); if(!img)return
 // half-height frames -> garbled fire / half-shifted embers. So the strip is rebuilt at
 // double width with the MC frames placed in the half the mesh actually samples; the
 // other half stays fully transparent (which is also what hides the flame on the
-// un-lit campfire, whose only tile is mcl_campfires_log.png + alpha clip).
+// un-lit campfire, whose only tile is mcl_campfires_log.png + alpha clip)
 async function pCampfireFrame(u8,side){ const img=await u8ToImage(u8); if(!img)return null;
   const w=img.naturalWidth||img.width, h=img.naturalHeight||img.height;
   const c=document.createElement('canvas'); c.width=w*2; c.height=h; const ctx=c.getContext('2d');
